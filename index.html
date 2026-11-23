@@ -1,1 +1,136 @@
-ggj
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KoiPay — Payment Processing India</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { --accent: #00ff88; --ink: #0a0d10; --muted: #a6afba; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Inter, sans-serif; background: #0a0d10; color: #fff; }
+    .nav {
+      width: min(980px, calc(100% - 28px));
+      margin: 16px auto;
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    }
+    .logo { display: flex; align-items: center; gap: 8px; font-family: "Inter Tight", sans-serif; font-weight: 800; }
+    .k {
+      width: 34px; height: 34px; border-radius: 8px;
+      display: grid; place-items: center;
+      background: #083322; color: var(--accent); font-weight: 800;
+    }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 46px; padding: 0 16px; border-radius: 12px; text-decoration: none; font-weight: 700;
+    }
+    .green { background: var(--accent); color: #062214; }
+    .ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.12); }
+    .hero, .section { width: min(980px, calc(100% - 28px)); margin: 0 auto; }
+    .snap {
+      border: 1px solid rgba(0,255,136,0.16);
+      border-radius: 22px;
+      background:
+        linear-gradient(180deg, rgba(0,255,136,0.05), transparent 40%),
+        repeating-linear-gradient(0deg, transparent 0 31px, rgba(255,255,255,0.03) 31px 32px),
+        repeating-linear-gradient(90deg, transparent 0 31px, rgba(255,255,255,0.03) 31px 32px),
+        #111418;
+      padding: 22px;
+      margin-bottom: 28px;
+    }
+    .label { font-size: 11px; letter-spacing: 1.4px; color: #7cffb2; font-weight: 700; }
+    .amt { font-family: "Inter Tight", sans-serif; font-size: clamp(40px, 9vw, 64px); margin: 18px 0 6px; }
+    .hint { color: #5f6873; font-size: 12px; }
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
+    .box { background: #161a1f; border-radius: 14px; padding: 14px; }
+    .box span { color: #7a848f; font-size: 11px; letter-spacing: 1px; }
+    .box b { display: block; color: var(--accent); font-size: 28px; margin-top: 4px; }
+    h1 { font-family: "Inter Tight", sans-serif; font-size: clamp(34px, 8vw, 58px); line-height: 0.98; letter-spacing: -1.5px; }
+    h1 em { color: var(--accent); font-style: italic; }
+    .lead { max-width: 640px; color: var(--muted); margin: 16px 0 22px; line-height: 1.6; }
+    .cta { display: flex; flex-wrap: wrap; gap: 10px; }
+    .section { padding: 42px 0; }
+    h2 { font-family: "Inter Tight", sans-serif; font-size: 28px; letter-spacing: -0.6px; margin-bottom: 10px; }
+    .steps, .two { display: grid; gap: 12px; }
+    @media (min-width: 760px) {
+      .steps { grid-template-columns: repeat(3, 1fr); }
+      .two { grid-template-columns: 1fr 1fr; }
+    }
+    .card { background: #111418; border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 18px; }
+    .card b { color: var(--accent); font-size: 12px; letter-spacing: 1px; }
+    .card h3 { margin: 8px 0 6px; }
+    .card p, li { color: var(--muted); font-size: 14px; line-height: 1.55; }
+    ul { margin-left: 18px; }
+    footer { padding: 20px 0 40px; text-align: center; color: #5f6873; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="logo"><div class="k">K</div>KoiPay</div>
+    <a class="btn green" data-tg="register" href="#" target="_blank" rel="noopener">Setup check karo →</a>
+  </div>
+  <section class="hero">
+    <div class="snap">
+      <div class="label">AGENT SNAPSHOT · ILLUSTRATIVE ONLY</div>
+      <div class="amt">₹5,20,000</div>
+      <p class="hint">Example only · actual results vary</p>
+      <div class="split">
+        <div class="box"><span>PAYIN</span><b>3%</b><small style="color:#7a848f">of volume</small></div>
+        <div class="box"><span>PAYOUT</span><b>1%</b><small style="color:#7a848f">of volume</small></div>
+      </div>
+    </div>
+    <p class="label">SETUP CHECK · 24/7 SUPPORT</p>
+    <h1>Payment processing.<br><em>Shartein pehle.</em></h1>
+    <p class="lead">3 short questions ke baad clear hoga ki flow aapke setup ke liye fit hai ya nahi. Fit hua to team next steps Telegram par explain karegi. Website form nahi hai.</p>
+    <div class="cta">
+      <a class="btn green" data-tg="register" href="#" target="_blank" rel="noopener">✈ Register / Setup check</a>
+      <a class="btn ghost" data-tg="support" href="#" target="_blank" rel="noopener">✈ Support Telegram</a>
+    </div>
+  </section>
+  <section class="section">
+    <h2>Pehle check, phir clear next steps.</h2>
+    <div class="steps">
+      <article class="card"><b>01 · CHECK</b><h3>Apna setup share karo</h3><p>Telegram pe 3 short questions se basic fit check hota hai.</p></article>
+      <article class="card"><b>02 · REVIEW</b><h3>Flow samjho</h3><p>Process, tools aur operating requirements team batati hai.</p></article>
+      <article class="card"><b>03 · NEXT STEP</b><h3>Team se aage badho</h3><p>Fit hone par onboarding ka next step milta hai.</p></article>
+    </div>
+  </section>
+  <section class="section">
+    <h2>Yeh kis ke liye hai?</h2>
+    <div class="two">
+      <article class="card">
+        <h3>Aapke liye hai agar:</h3>
+        <ul>
+          <li>Daily operations samajhne ke liye ready ho</li>
+          <li>Minimum working balance: 500 USDT</li>
+          <li>Onboarding steps follow karoge</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Yeh fit nahi hoga agar:</h3>
+        <ul>
+          <li>Guaranteed income ya instant results chahiye</li>
+          <li>Verification steps follow nahi karna</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+  <section class="section" style="text-align:center">
+    <h2>Pehle setup check karo, phir aage badho.</h2>
+    <p class="lead" style="margin-left:auto;margin-right:auto">Telegram mein 3 short questions ke baad aapko clear next steps milenge.</p>
+    <div class="cta" style="justify-content:center">
+      <a class="btn green" data-tg="register" href="#" target="_blank" rel="noopener">✈ Apna setup check karo</a>
+      <a class="btn ghost" data-tg="support" href="#" target="_blank" rel="noopener">✈ Team se baat karo</a>
+    </div>
+  </section>
+  <footer>Illustrative numbers only. Results depend on volume, setup and performance. No guaranteed income.</footer>
+  <script>
+    const TG_REGISTER = "https://t.me/LuckyOfficial";
+    const TG_SUPPORT  = "https://t.me/LuckyOfficial";
+    document.querySelectorAll("[data-tg]").forEach(el => {
+      el.href = el.dataset.tg === "support" ? TG_SUPPORT : TG_REGISTER;
+    });
+  </script>
+</body>
+</html>
