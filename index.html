@@ -1,136 +1,1488 @@
+
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>KoiPay — Payment Processing India</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@700;800&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>SathiPay | Earn Commission With Every Transaction</title>
+
+  <meta name="description" content="Discover SathiPay's payment platform with commission opportunities, secure payment processing and business-friendly tools.">
+
   <style>
-    :root { --accent: #00ff88; --ink: #0a0d10; --muted: #a6afba; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Inter, sans-serif; background: #0a0d10; color: #fff; }
-    .nav {
-      width: min(980px, calc(100% - 28px));
-      margin: 16px auto;
-      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    :root {
+      --blue: #0755e9;
+      --dark-blue: #071c50;
+      --cyan: #08b9f5;
+      --yellow: #ffda00;
+      --orange: #ff9d00;
+      --white: #ffffff;
+      --light: #f3f8ff;
+      --text: #10234f;
+      --muted: #64748b;
     }
-    .logo { display: flex; align-items: center; gap: 8px; font-family: "Inter Tight", sans-serif; font-weight: 800; }
-    .k {
-      width: 34px; height: 34px; border-radius: 8px;
-      display: grid; place-items: center;
-      background: #083322; color: var(--accent); font-weight: 800;
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      min-height: 46px; padding: 0 16px; border-radius: 12px; text-decoration: none; font-weight: 700;
+
+    html {
+      scroll-behavior: smooth;
     }
-    .green { background: var(--accent); color: #062214; }
-    .ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.12); }
-    .hero, .section { width: min(980px, calc(100% - 28px)); margin: 0 auto; }
-    .snap {
-      border: 1px solid rgba(0,255,136,0.16);
-      border-radius: 22px;
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--white);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .page {
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
       background:
-        linear-gradient(180deg, rgba(0,255,136,0.05), transparent 40%),
-        repeating-linear-gradient(0deg, transparent 0 31px, rgba(255,255,255,0.03) 31px 32px),
-        repeating-linear-gradient(90deg, transparent 0 31px, rgba(255,255,255,0.03) 31px 32px),
-        #111418;
-      padding: 22px;
-      margin-bottom: 28px;
+        radial-gradient(
+          ellipse at 100% 20%,
+          rgba(0, 148, 255, 0.12),
+          transparent 35%
+        ),
+        radial-gradient(
+          ellipse at 0% 80%,
+          rgba(255, 220, 0, 0.12),
+          transparent 35%
+        ),
+        #fff;
     }
-    .label { font-size: 11px; letter-spacing: 1.4px; color: #7cffb2; font-weight: 700; }
-    .amt { font-family: "Inter Tight", sans-serif; font-size: clamp(40px, 9vw, 64px); margin: 18px 0 6px; }
-    .hint { color: #5f6873; font-size: 12px; }
-    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
-    .box { background: #161a1f; border-radius: 14px; padding: 14px; }
-    .box span { color: #7a848f; font-size: 11px; letter-spacing: 1px; }
-    .box b { display: block; color: var(--accent); font-size: 28px; margin-top: 4px; }
-    h1 { font-family: "Inter Tight", sans-serif; font-size: clamp(34px, 8vw, 58px); line-height: 0.98; letter-spacing: -1.5px; }
-    h1 em { color: var(--accent); font-style: italic; }
-    .lead { max-width: 640px; color: var(--muted); margin: 16px 0 22px; line-height: 1.6; }
-    .cta { display: flex; flex-wrap: wrap; gap: 10px; }
-    .section { padding: 42px 0; }
-    h2 { font-family: "Inter Tight", sans-serif; font-size: 28px; letter-spacing: -0.6px; margin-bottom: 10px; }
-    .steps, .two { display: grid; gap: 12px; }
-    @media (min-width: 760px) {
-      .steps { grid-template-columns: repeat(3, 1fr); }
-      .two { grid-template-columns: 1fr 1fr; }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
     }
-    .card { background: #111418; border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 18px; }
-    .card b { color: var(--accent); font-size: 12px; letter-spacing: 1px; }
-    .card h3 { margin: 8px 0 6px; }
-    .card p, li { color: var(--muted); font-size: 14px; line-height: 1.55; }
-    ul { margin-left: 18px; }
-    footer { padding: 20px 0 40px; text-align: center; color: #5f6873; font-size: 12px; }
+
+    /* Header */
+
+    header {
+      padding: 25px 0;
+      position: relative;
+      z-index: 5;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #1688ff, #0038a8);
+      color: white;
+      font-size: 32px;
+      font-weight: 900;
+      font-style: italic;
+      box-shadow: 0 7px 20px rgba(0, 86, 230, .22);
+    }
+
+    .brand-name {
+      font-size: 36px;
+      font-weight: 900;
+      font-style: italic;
+      letter-spacing: -1.8px;
+      color: var(--dark-blue);
+    }
+
+    .brand-name span {
+      color: var(--blue);
+    }
+
+    .brand-tagline {
+      margin-top: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .5px;
+      color: var(--dark-blue);
+    }
+
+    .header-badge {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 12px 19px;
+      border: 1px solid #d7e5ff;
+      border-radius: 30px;
+      background: rgba(255,255,255,.8);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--dark-blue);
+    }
+
+    .header-badge span {
+      color: #ffae00;
+      font-size: 20px;
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      padding: 55px 0 85px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 10px 17px;
+      border-radius: 30px;
+      background: #eaf4ff;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 25px;
+    }
+
+    .eyebrow span {
+      color: #ffae00;
+      font-size: 18px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 5.3vw, 72px);
+      line-height: 1.04;
+      letter-spacing: -2.8px;
+      font-weight: 900;
+      color: var(--dark-blue);
+    }
+
+    h1 .highlight {
+      display: inline-block;
+      position: relative;
+      color: var(--blue);
+      z-index: 1;
+    }
+
+    h1 .highlight::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      height: 17px;
+      left: -4px;
+      right: -4px;
+      bottom: 1px;
+      background: var(--yellow);
+      border-radius: 5px;
+      transform: rotate(-1.5deg);
+    }
+
+    .hero-description {
+      max-width: 520px;
+      margin: 25px 0 28px;
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .feature-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 22px;
+      margin-bottom: 30px;
+    }
+
+    .feature-point {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--dark-blue);
+    }
+
+    .check {
+      width: 25px;
+      height: 25px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #e5f3ff;
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    /* CTA Buttons */
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      min-height: 58px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 25px;
+      border-radius: 14px;
+      font-size: 15px;
+      font-weight: 800;
+      transition: .25s ease;
+      cursor: pointer;
+      border: 0;
+      text-align: center;
+    }
+
+    .btn-primary {
+      color: white;
+      background: linear-gradient(110deg, #0865f5, #079eea);
+      box-shadow: 0 10px 25px rgba(0, 93, 245, .23);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(0, 93, 245, .35);
+    }
+
+    .btn-secondary {
+      color: var(--dark-blue);
+      background: white;
+      border: 1px solid #dce8f7;
+      box-shadow: 0 7px 20px rgba(13, 47, 103, .06);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      transform: translateY(-3px);
+    }
+
+    .trust-note {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .trust-note span {
+      color: #10a56a;
+      font-size: 18px;
+    }
+
+    /* Commission visual */
+
+    .hero-visual {
+      position: relative;
+      min-width: 0;
+      padding: 25px 0;
+    }
+
+    .visual-glow {
+      position: absolute;
+      width: 85%;
+      height: 85%;
+      top: 8%;
+      left: 8%;
+      border-radius: 50%;
+      background: rgba(0, 115, 255, .13);
+      filter: blur(70px);
+    }
+
+    .visual-circle {
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      max-width: 100%;
+      max-height: 100%;
+      border: 2px solid rgba(0, 99, 255, .13);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .visual-circle::before,
+    .visual-circle::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 196, 0, .22);
+    }
+
+    .visual-circle::before {
+      inset: 25px;
+    }
+
+    .visual-circle::after {
+      inset: 55px;
+    }
+
+    .commission-card {
+      position: relative;
+      z-index: 1;
+      width: min(460px, 100%);
+      margin: auto;
+      padding: 30px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, .92);
+      border: 1px solid rgba(0, 90, 230, .13);
+      box-shadow: 0 25px 70px rgba(10, 54, 125, .16);
+      transform: rotate(-1deg);
+    }
+
+    .commission-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .commission-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--muted);
+    }
+
+    .commission-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 7px;
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--dark-blue);
+    }
+
+    .commission-label span {
+      color: var(--blue);
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 11px;
+      border-radius: 20px;
+      background: #e8fff4;
+      color: #098653;
+      font-size: 11px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #0ab76b;
+    }
+
+    .commission-main {
+      padding: 25px;
+      border-radius: 22px;
+      background: linear-gradient(145deg, #0755e9, #062e9e);
+      color: white;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .commission-main::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      right: -80px;
+      top: -100px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.10);
+    }
+
+    .commission-main small {
+      font-size: 13px;
+      font-weight: 700;
+      color: #c9e5ff;
+    }
+
+    .commission-value {
+      margin: 10px 0 6px;
+      font-size: 88px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -4px;
+      color: var(--yellow);
+    }
+
+    .commission-main p {
+      font-size: 13px;
+      line-height: 1.6;
+      color: #d8e8ff;
+    }
+
+    .commission-footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .mini-card {
+      padding: 16px;
+      border-radius: 15px;
+      background: #f1f7ff;
+    }
+
+    .mini-card strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 19px;
+      color: var(--dark-blue);
+    }
+
+    .mini-card span {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .floating-coin {
+      position: absolute;
+      z-index: 2;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #fff4a5, #ffb800);
+      color: #805300;
+      border: 5px solid #fff;
+      box-shadow: 0 12px 30px rgba(214, 151, 0, .25);
+      font-size: 28px;
+      font-weight: 900;
+    }
+
+    .coin-one {
+      width: 70px;
+      height: 70px;
+      top: 3%;
+      right: 4%;
+    }
+
+    .coin-two {
+      width: 54px;
+      height: 54px;
+      bottom: 4%;
+      left: 1%;
+      font-size: 23px;
+    }
+
+    /* Feature strip */
+
+    .feature-strip {
+      position: relative;
+      z-index: 2;
+      padding: 0 0 70px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .feature-card {
+      padding: 25px 20px;
+      border: 1px solid #e1ebfa;
+      border-radius: 20px;
+      background: rgba(255,255,255,.88);
+      box-shadow: 0 12px 35px rgba(10, 48, 108, .05);
+      transition: .25s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 40px rgba(10, 48, 108, .10);
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      border-radius: 14px;
+      background: linear-gradient(145deg, #e6f5ff, #f1f6ff);
+      font-size: 24px;
+    }
+
+    .feature-card h3 {
+      margin-bottom: 10px;
+      font-size: 17px;
+      color: var(--dark-blue);
+    }
+
+    .feature-card p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    /* Details section */
+
+    .details {
+      padding: 85px 0;
+      background: linear-gradient(180deg, #f7fbff, #ffffff);
+    }
+
+    .section-heading {
+      max-width: 680px;
+      margin: 0 auto 50px;
+      text-align: center;
+    }
+
+    .section-heading .eyebrow {
+      margin-bottom: 18px;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 17px;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+      color: var(--dark-blue);
+    }
+
+    .section-heading p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .detail-card {
+      padding: 32px;
+      border: 1px solid #e0eafb;
+      border-radius: 24px;
+      background: white;
+      box-shadow: 0 15px 40px rgba(10, 48, 108, .05);
+    }
+
+    .detail-card h3 {
+      margin-bottom: 14px;
+      font-size: 22px;
+      color: var(--dark-blue);
+    }
+
+    .detail-card p {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .detail-list {
+      display: grid;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .detail-list li {
+      display: flex;
+      gap: 12px;
+      list-style: none;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text);
+    }
+
+    .detail-list li span {
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .rate-box {
+      margin-top: 20px;
+      padding: 25px;
+      border-radius: 18px;
+      background: linear-gradient(120deg, #0755e9, #04a8e8);
+      color: white;
+    }
+
+    .rate-box small {
+      font-weight: 700;
+      color: #d9efff;
+    }
+
+    .rate-box strong {
+      display: block;
+      margin: 8px 0;
+      font-size: 43px;
+      color: var(--yellow);
+    }
+
+    .rate-box p {
+      color: #e4f2ff;
+      font-size: 12px;
+    }
+
+    /* Bottom CTA */
+
+    .bottom-cta {
+      padding: 70px 0;
+    }
+
+    .cta-panel {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 45px;
+      border-radius: 28px;
+      background: linear-gradient(115deg, #073bb3, #087df0);
+      color: white;
+      box-shadow: 0 20px 55px rgba(0, 82, 220, .2);
+    }
+
+    .cta-panel::after {
+      content: "";
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      right: -120px;
+      top: -180px;
+      border: 45px solid rgba(255,255,255,.08);
+      border-radius: 50%;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+      max-width: 650px;
+    }
+
+    .cta-content h2 {
+      margin-bottom: 12px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.15;
+      letter-spacing: -1px;
+    }
+
+    .cta-content p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #dcecff;
+    }
+
+    .cta-panel .btn {
+      position: relative;
+      z-index: 1;
+      flex-shrink: 0;
+      color: var(--dark-blue);
+      background: var(--yellow);
+      box-shadow: 0 10px 25px rgba(0,0,0,.12);
+    }
+
+    /* Footer */
+
+    footer {
+      padding: 30px 0;
+      border-top: 1px solid #e7eef9;
+      background: #fff;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      font-size: 22px;
+      font-weight: 900;
+      font-style: italic;
+      color: var(--dark-blue);
+    }
+
+    .footer-brand span {
+      color: var(--blue);
+    }
+
+    .footer-content p {
+      font-size: 12px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .footer-note {
+      max-width: 650px;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        gap: 30px;
+      }
+
+      .brand-name {
+        font-size: 30px;
+      }
+
+      .hero {
+        padding-top: 40px;
+      }
+
+      .commission-card {
+        padding: 22px;
+      }
+
+      .commission-value {
+        font-size: 72px;
+      }
+
+      .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cta-panel {
+        padding: 35px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .container {
+        width: min(100% - 34px, 500px);
+      }
+
+      header {
+        padding: 17px 0;
+      }
+
+      .brand {
+        gap: 8px;
+      }
+
+      .brand-logo {
+        width: 42px;
+        height: 42px;
+        font-size: 25px;
+      }
+
+      .brand-name {
+        font-size: 25px;
+        letter-spacing: -1px;
+      }
+
+      .brand-tagline {
+        font-size: 8px;
+      }
+
+      .header-badge {
+        padding: 9px 11px;
+        font-size: 10px;
+        gap: 5px;
+      }
+
+      .header-badge span {
+        font-size: 15px;
+      }
+
+      .hero {
+        padding: 35px 0 55px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .eyebrow {
+        margin-bottom: 20px;
+        font-size: 11px;
+      }
+
+      h1 {
+        font-size: clamp(38px, 10vw, 53px);
+        letter-spacing: -1.8px;
+      }
+
+      h1 .highlight::after {
+        height: 10px;
+      }
+
+      .hero-description {
+        margin: 20px auto;
+        font-size: 15px;
+        line-height: 1.75;
+      }
+
+      .feature-points {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .feature-point {
+        font-size: 12px;
+      }
+
+      .check {
+        width: 21px;
+        height: 21px;
+        font-size: 12px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 25px;
+      }
+
+      .btn {
+        width: 100%;
+        min-height: 54px;
+        font-size: 14px;
+      }
+
+      .trust-note {
+        justify-content: center;
+        font-size: 11px;
+      }
+
+      .hero-visual {
+        padding: 20px 0;
+        max-width: 450px;
+        width: 100%;
+        margin: auto;
+      }
+
+      .commission-card {
+        padding: 20px;
+        border-radius: 22px;
+        transform: none;
+      }
+
+      .commission-top {
+        margin-bottom: 18px;
+      }
+
+      .commission-label {
+        font-size: 21px;
+      }
+
+      .status {
+        font-size: 9px;
+        padding: 7px 9px;
+      }
+
+      .commission-main {
+        padding: 22px;
+        border-radius: 18px;
+      }
+
+      .commission-value {
+        font-size: 75px;
+      }
+
+      .commission-footer {
+        gap: 9px;
+      }
+
+      .mini-card {
+        padding: 13px;
+      }
+
+      .mini-card strong {
+        font-size: 17px;
+      }
+
+      .coin-one {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        right: -4px;
+        top: -5px;
+      }
+
+      .coin-two {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+        left: -4px;
+        bottom: -5px;
+      }
+
+      .feature-strip {
+        padding-bottom: 45px;
+      }
+
+      .feature-grid {
+        gap: 12px;
+      }
+
+      .feature-card {
+        padding: 20px 15px;
+        border-radius: 17px;
+      }
+
+      .feature-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        margin-bottom: 13px;
+      }
+
+      .feature-card h3 {
+        font-size: 14px;
+        line-height: 1.4;
+      }
+
+      .feature-card p {
+        font-size: 12px;
+      }
+
+      .details {
+        padding: 55px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 30px;
+      }
+
+      .section-heading h2 {
+        font-size: 31px;
+      }
+
+      .section-heading p {
+        font-size: 14px;
+      }
+
+      .details-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .detail-card {
+        padding: 24px;
+        border-radius: 20px;
+      }
+
+      .detail-card h3 {
+        font-size: 20px;
+      }
+
+      .detail-card p,
+      .detail-list li {
+        font-size: 13px;
+      }
+
+      .rate-box strong {
+        font-size: 36px;
+      }
+
+      .bottom-cta {
+        padding: 45px 0;
+      }
+
+      .cta-panel {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 30px 23px;
+        border-radius: 22px;
+        text-align: center;
+      }
+
+      .cta-content h2 {
+        font-size: 29px;
+      }
+
+      .cta-content p {
+        font-size: 13px;
+      }
+
+      .cta-panel .btn {
+        width: 100%;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-note {
+        font-size: 11px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .header-badge {
+        display: none;
+      }
+
+      .brand-name {
+        font-size: 24px;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .commission-footer {
+        grid-template-columns: 1fr;
+      }
+
+      .commission-value {
+        font-size: 65px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <div class="nav">
-    <div class="logo"><div class="k">K</div>KoiPay</div>
-    <a class="btn green" data-tg="register" href="#" target="_blank" rel="noopener">Setup check karo →</a>
-  </div>
-  <section class="hero">
-    <div class="snap">
-      <div class="label">AGENT SNAPSHOT · ILLUSTRATIVE ONLY</div>
-      <div class="amt">₹5,20,000</div>
-      <p class="hint">Example only · actual results vary</p>
-      <div class="split">
-        <div class="box"><span>PAYIN</span><b>3%</b><small style="color:#7a848f">of volume</small></div>
-        <div class="box"><span>PAYOUT</span><b>1%</b><small style="color:#7a848f">of volume</small></div>
+
+  <div class="page">
+
+    <!-- Header -->
+
+    <header>
+      <div class="container navbar">
+
+        <a href="#home" class="brand" aria-label="SathiPay Home">
+          <div class="brand-logo">S</div>
+
+          <div>
+            <div class="brand-name">
+              Sathi<span>Pay</span>
+            </div>
+
+            <div class="brand-tagline">
+              Smart Payments, Max Rewards
+            </div>
+          </div>
+        </a>
+
+        <div class="header-badge">
+          <span>✦</span>
+          Smart Payment Platform
+        </div>
+
       </div>
-    </div>
-    <p class="label">SETUP CHECK · 24/7 SUPPORT</p>
-    <h1>Payment processing.<br><em>Shartein pehle.</em></h1>
-    <p class="lead">3 short questions ke baad clear hoga ki flow aapke setup ke liye fit hai ya nahi. Fit hua to team next steps Telegram par explain karegi. Website form nahi hai.</p>
-    <div class="cta">
-      <a class="btn green" data-tg="register" href="#" target="_blank" rel="noopener">✈ Register / Setup check</a>
-      <a class="btn ghost" data-tg="support" href="#" target="_blank" rel="noopener">✈ Support Telegram</a>
-    </div>
-  </section>
-  <section class="section">
-    <h2>Pehle check, phir clear next steps.</h2>
-    <div class="steps">
-      <article class="card"><b>01 · CHECK</b><h3>Apna setup share karo</h3><p>Telegram pe 3 short questions se basic fit check hota hai.</p></article>
-      <article class="card"><b>02 · REVIEW</b><h3>Flow samjho</h3><p>Process, tools aur operating requirements team batati hai.</p></article>
-      <article class="card"><b>03 · NEXT STEP</b><h3>Team se aage badho</h3><p>Fit hone par onboarding ka next step milta hai.</p></article>
-    </div>
-  </section>
-  <section class="section">
-    <h2>Yeh kis ke liye hai?</h2>
-    <div class="two">
-      <article class="card">
-        <h3>Aapke liye hai agar:</h3>
-        <ul>
-          <li>Daily operations samajhne ke liye ready ho</li>
-          <li>Minimum working balance: 500 USDT</li>
-          <li>Onboarding steps follow karoge</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Yeh fit nahi hoga agar:</h3>
-        <ul>
-          <li>Guaranteed income ya instant results chahiye</li>
-          <li>Verification steps follow nahi karna</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-  <section class="section" style="text-align:center">
-    <h2>Pehle setup check karo, phir aage badho.</h2>
-    <p class="lead" style="margin-left:auto;margin-right:auto">Telegram mein 3 short questions ke baad aapko clear next steps milenge.</p>
-    <div class="cta" style="justify-content:center">
-      <a class="btn green" data-tg="register" href="#" target="_blank" rel="noopener">✈ Apna setup check karo</a>
-      <a class="btn ghost" data-tg="support" href="#" target="_blank" rel="noopener">✈ Team se baat karo</a>
-    </div>
-  </section>
-  <footer>Illustrative numbers only. Results depend on volume, setup and performance. No guaranteed income.</footer>
-  <script>
-    const TG_REGISTER = "https://t.me/LuckyOfficial";
-    const TG_SUPPORT  = "https://t.me/LuckyOfficial";
-    document.querySelectorAll("[data-tg]").forEach(el => {
-      el.href = el.dataset.tg === "support" ? TG_SUPPORT : TG_REGISTER;
-    });
-  </script>
+    </header>
+
+    <!-- Hero Section -->
+
+    <main id="home">
+
+      <section class="hero">
+        <div class="container hero-grid">
+
+          <div class="hero-content">
+
+            <div class="eyebrow">
+              <span>✦</span>
+              SMART PAYMENT SOLUTIONS
+            </div>
+
+            <h1>
+              Earn<br>
+              <span class="highlight">Commission</span><br>
+              With Every<br>
+              Transaction
+            </h1>
+
+            <p class="hero-description">
+              Discover a smarter way to manage payment operations.
+              Connect with SathiPay and explore business-friendly
+              payment solutions with a simple, secure platform.
+            </p>
+
+            <div class="feature-points">
+
+              <div class="feature-point">
+                <span class="check">✓</span>
+                Secure Platform
+              </div>
+
+              <div class="feature-point">
+                <span class="check">✓</span>
+                Business Friendly
+              </div>
+
+              <div class="feature-point">
+                <span class="check">✓</span>
+                Simple Operations
+              </div>
+
+            </div>
+
+            <!-- BUTTON 1 -->
+
+            <div class="hero-buttons">
+
+              <a
+                href="https://t.me/+1gtjWqMdTHlmMDdl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+              >
+                Start Earning With SathiPay
+                <span>→</span>
+              </a>
+
+              <!-- BUTTON 2 -->
+
+              <a
+                href="https://t.me/+1gtjWqMdTHlmMDdl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-secondary"
+              >
+                <span>✈</span>
+                Connect on Telegram
+              </a>
+
+            </div>
+
+            <div class="trust-note">
+              <span>✓</span>
+              Explore the platform and connect with our team.
+            </div>
+
+          </div>
+
+          <!-- Commission Visual -->
+
+          <div class="hero-visual">
+
+            <div class="visual-glow"></div>
+            <div class="visual-circle"></div>
+
+            <div class="floating-coin coin-one">₹</div>
+            <div class="floating-coin coin-two">₹</div>
+
+            <div class="commission-card">
+
+              <div class="commission-top">
+
+                <div>
+                  <div class="commission-title">
+                    SathiPay Commission
+                  </div>
+
+                  <div class="commission-label">
+                    <span>✦</span>
+                    Payment Panel
+                  </div>
+                </div>
+
+                <div class="status">
+                  <span class="status-dot"></span>
+                  Platform
+                </div>
+
+              </div>
+
+              <div class="commission-main">
+
+                <small>COMMISSION OPPORTUNITY</small>
+
+                <div class="commission-value">8%</div>
+
+                <p>
+                  Explore commission opportunities through
+                  eligible transactions. Terms and conditions apply.
+                </p>
+
+              </div>
+
+              <div class="commission-footer">
+
+                <div class="mini-card">
+                  <strong>Secure</strong>
+                  <span>Payment Platform</span>
+                </div>
+
+                <div class="mini-card">
+                  <strong>Simple</strong>
+                  <span>Business Operations</span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Features -->
+
+      <section class="feature-strip">
+        <div class="container">
+
+          <div class="feature-grid">
+
+            <div class="feature-card">
+              <div class="feature-icon">⚡</div>
+
+              <h3>Fast Operations</h3>
+
+              <p>
+                Manage payment-related operations through
+                a simple platform.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">🛡️</div>
+
+              <h3>Secure Platform</h3>
+
+              <p>
+                Explore a platform designed with
+                security-conscious operations.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">📊</div>
+
+              <h3>Business Insights</h3>
+
+              <p>
+                Access useful tools to help organize
+                your business activities.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">👥</div>
+
+              <h3>Team Friendly</h3>
+
+              <p>
+                Connect with the team and explore
+                platform-related information.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Details -->
+
+      <section class="details">
+        <div class="container">
+
+          <div class="section-heading">
+
+            <div class="eyebrow">
+              <span>✦</span>
+              SMART PAYMENT SOLUTIONS
+            </div>
+
+            <h2>
+              A Smarter Way to Manage Your Payment Business
+            </h2>
+
+            <p>
+              Discover a platform designed to make payment
+              operations easier to understand and manage.
+            </p>
+
+          </div>
+
+          <div class="details-grid">
+
+            <div class="detail-card">
+
+              <h3>Designed for Business</h3>
+
+              <p>
+                SathiPay provides a platform for exploring
+                payment-related services and business operations.
+                Connect with the team to learn more about
+                available features and eligibility.
+              </p>
+
+              <ul class="detail-list">
+
+                <li>
+                  <span>✓</span>
+                  Simple and organized platform experience
+                </li>
+
+                <li>
+                  <span>✓</span>
+                  Business-friendly payment tools
+                </li>
+
+                <li>
+                  <span>✓</span>
+                  Access to platform-related information
+                </li>
+
+                <li>
+                  <span>✓</span>
+                  Commission opportunities subject to terms
+                </li>
+
+              </ul>
+
+            </div>
+
+            <div class="detail-card">
+
+              <h3>Commission Opportunities</h3>
+
+              <p>
+                Explore the commission structure and understand
+                the applicable terms before participating.
+                Actual commission may depend on eligible
+                transactions and platform conditions.
+              </p>
+
+              <div class="rate-box">
+
+                <small>ADVERTISED COMMISSION</small>
+
+                <strong>8%</strong>
+
+                <p>
+                  Commission is subject to eligibility,
+                  transaction completion and applicable terms.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Bottom CTA -->
+
+      <section class="bottom-cta">
+        <div class="container">
+
+          <div class="cta-panel">
+
+            <div class="cta-content">
+
+              <h2>
+                Explore SathiPay Today
+              </h2>
+
+              <p>
+                Connect with our team on Telegram to learn more
+                about the platform, its features and applicable
+                commission terms.
+              </p>
+
+            </div>
+
+            <!-- This is the second and final CTA button -->
+
+            <a
+              href="https://t.me/+1gtjWqMdTHlmMDdl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn"
+            >
+              Connect on Telegram
+              <span>→</span>
+            </a>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer>
+      <div class="container footer-content">
+
+        <div>
+          <div class="footer-brand">
+            Sathi<span>Pay</span>
+          </div>
+
+          <p>Smart Payments, Max Rewards</p>
+        </div>
+
+        <p class="footer-note">
+          Commission opportunities are subject to applicable
+          terms, eligibility and completed transactions.
+          Please review all relevant terms before participating.
+        </p>
+
+      </div>
+    </footer>
+
+  </div>
+
 </body>
 </html>
